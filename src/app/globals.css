@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main{
+    gap: 100px;
+}
+
+.summery{
+    width: 62vw;
+    height: 90vh;
+    padding: 19px;
+    border: 1px solid #00000046;
+    border-radius: 9px;
+}
+
+.input{
+    width: 450px;
+    height: 60px;
+    border-radius: 9px;
+    border: 1px solid #00000046;
+}
