@@ -93,22 +93,22 @@ export default function AudioSummarize() {
   };
 
   return (
-    <div className="flex justify-between main">
+    <div className="flex flex-col lg:flex-row justify-between main">
       <div style={{ height: "46px" }}>
         <form className="flex items-center gap-2" onSubmit={handleSubmit}>
           <TextureButton variant='secondary' onClick={() => document.getElementById('audioinput')?.click()}>
             <input id='audioinput' type="file" accept="audio/*" hidden onChange={handleFileChange} />
-            <p>{audioName || <div className="flex gap-2 items-center"><AudioLines size={19} /> Upload Audio</div>}</p>
+            <p>{audioName || <span className="flex gap-2 items-center"><AudioLines size={19} /> Upload Audio</span>}</p>
           </TextureButton>
           <div>
             <TextureButton style={{ width: "190px" }} type="submit" disabled={!audioFile || loading}>
-              {loading ? 'Summarizing...' : <div className="flex gap-2 items-center"><Sparkles size={19} /> Summerize Audio</div>}
+              {loading ? 'Summarizing...' : <span className="flex gap-2 items-center"><Sparkles size={19} /> Summerize Audio</span>}
             </TextureButton>
           </div>
         </form>
 
         <div className="mt-4">
-          <div className="response absolute overflow-y-auto" style={{ bottom: "160px", height: "460px", width: "360px" }}>
+          <div className="hidden lg:flex response absolute overflow-y-auto" style={{ bottom: "160px", height: "460px", width: "360px" }}>
             {chatResponse && (
               <div>
                 <p className="font-semibold tracking-tight">Response</p>
@@ -116,7 +116,7 @@ export default function AudioSummarize() {
               </div>
             )}
           </div>
-          <div className="absolute bottom-10">
+          <div className="absolute bottom-5 lg:bottom-10">
             <Input
               className="input"
               placeholder="Ask follow-up question...."
@@ -129,7 +129,7 @@ export default function AudioSummarize() {
               onClick={handleQuestionSubmit}
               disabled={!question || chatLoading}
             >
-              {chatLoading ? 'Asking...' :<div className="flex gap-2 items-center">Ask Question<SendHorizonal size={19} /></div>}
+              {chatLoading ? 'Asking...' :<span className="flex gap-2 items-center">Ask Question<SendHorizonal size={19} /></span>}
             </TextureButton>
           </div>
         </div>
@@ -146,6 +146,7 @@ export default function AudioSummarize() {
           <ReactMarkdown className="pt-5" children={summary} />
         )}
       </div>
+
     </div>
   );
 }

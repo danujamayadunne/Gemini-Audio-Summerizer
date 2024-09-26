@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.main{
+.main {
     gap: 100px;
 }
 
-.summery{
+.summery {
     width: 62vw;
     height: 90vh;
     padding: 19px;
@@ -14,9 +14,26 @@
     border-radius: 9px;
 }
 
-.input{
+.input {
     width: 450px;
     height: 60px;
     border-radius: 9px;
     border: 1px solid #00000046;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .main {
+        gap: 46px;
+    }
+
+    .summery {
+        width: 82.6vw;
+        height: 600px;
+    }
+
+    .input {
+        width: 82.6vw;
+    }
+
 }
