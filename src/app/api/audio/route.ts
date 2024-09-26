@@ -65,7 +65,7 @@ export async function POST(request: Request) {
                 },
             },
             {
-                text: "Please summarize this audio. Include the main points and key takeaways and use bold texts for special texts. The summerize is for the studnets undergraduate students to learn the lecture without listening to the whole audio. The summery should have all the key points and takeaways from the audio. Don't say about undergraduate students in the summary. The summary should be in a way that the students can understand the lecture without listening to the whole audio. Dont ask question from the user. Dont include greetings.",
+                text: "Please summarize this audio. Include the main points and key takeaways and use bold texts for special texts. The summerize is for the undergraduate students to learn the lecture without listening to the whole audio. The summery should have all the key points and takeaways from the audio. Don't say about undergraduate students in the summary. The summary should be in a way that the students can understand the lecture without listening to the whole audio. Dont ask question from the user. Dont include greetings.",
             }
         ]);
 
