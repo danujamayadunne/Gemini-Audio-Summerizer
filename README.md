@@ -17,7 +17,7 @@ To set up and run the app locally, follow these steps:
 
 - [Node.js](https://nodejs.org/) version 18 or higher.
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) package manager.
-- A [Google Gemini API](https://developers.google.com/) key for audio summarization.
+- A [Google Gemini API](https://aistudio.google.com/) key for audio summarization and chat function.
 
 ### Clone the Repository
 clone this repository.
