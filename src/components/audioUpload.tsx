@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { TextureButton } from './button';
 import { Input } from './ui/input';
-import { SendHorizonal } from 'lucide-react';
+import { AudioLines, SendHorizonal, Sparkles } from 'lucide-react';
 
 export default function AudioSummarize() {
   const [audioFile, setAudioFile] = useState<File | null>(null);
@@ -98,11 +98,11 @@ export default function AudioSummarize() {
         <form className="flex items-center gap-2" onSubmit={handleSubmit}>
           <TextureButton variant='secondary' onClick={() => document.getElementById('audioinput')?.click()}>
             <input id='audioinput' type="file" accept="audio/*" hidden onChange={handleFileChange} />
-            <p>{audioName || 'Upload Audio'}</p>
+            <p>{audioName || <div className="flex gap-2 items-center"><AudioLines size={19} /> Upload Audio</div>}</p>
           </TextureButton>
           <div>
-            <TextureButton style={{ width: "160px" }} type="submit" disabled={!audioFile || loading}>
-              {loading ? 'Summarizing...' : 'Summarize Audio'}
+            <TextureButton style={{ width: "190px" }} type="submit" disabled={!audioFile || loading}>
+              {loading ? 'Summarizing...' : <div className="flex gap-2 items-center"><Sparkles size={19} /> Summerize Audio</div>}
             </TextureButton>
           </div>
         </form>
@@ -119,7 +119,7 @@ export default function AudioSummarize() {
           <div className="absolute bottom-10">
             <Input
               className="input"
-              placeholder="Ask follow-up question"
+              placeholder="Ask follow-up question...."
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               disabled={chatLoading}
@@ -129,7 +129,7 @@ export default function AudioSummarize() {
               onClick={handleQuestionSubmit}
               disabled={!question || chatLoading}
             >
-              {chatLoading ? 'Asking...' : <SendHorizonal size={19} />}
+              {chatLoading ? 'Asking...' :<div className="flex gap-2 items-center">Ask Question<SendHorizonal size={19} /></div>}
             </TextureButton>
           </div>
         </div>
