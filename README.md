@@ -35,9 +35,7 @@ To start the app in development mode, run:
 run npm dev
 
 ### Contributing
-Contributions are welcome! Please open issues or submit pull requests to improve the app.
-
-- The follow-up fuction is not developed yet.
+Contributions are welcome. Please open issues or submit pull requests to improve the app.
 
 ### License
 This project is licensed under the MIT License.
