@@ -37,5 +37,17 @@ run npm dev
 ### Contributing
 Contributions are welcome. Please open issues or submit pull requests to improve the app.
 
-### License
-This project is licensed under the MIT License.
+## License
+
+This project is released into the public domain under the Unlicense. This means you can do absolutely anything you want with this code - no attribution required.
+
+### What you can do with this code:
+- ✅ Use it commercially
+- ✅ Modify it
+- ✅ Distribute it
+- ✅ Use it privately
+- ✅ Sublicense it
+- ✅ Remove all attribution
+- ✅ Do whatever you want with it
+
+For more information about the Unlicense, visit [unlicense.org](http://unlicense.org/)
